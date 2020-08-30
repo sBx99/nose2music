@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "AUTHENTIC Sans";
+    src: url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.woff2?v=1595102445095") format("woff2"),
+        url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.woff?v=1595102445203") format("woff"),
+        url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.otf?v=1595102498458") format("otf");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Authentic Sans', Helvetica, arial;
+    background-image: linear-gradient(to left, hotpink, lightpink);
+
+    scrollbar-color: black;
+    scrollbar-face-color: hotpink;
+    scrollbar-width: 0.75rem;
+}
+
+#myCanvas {
+    overflow: hidden;
+    z-index: -1;
+}
+
+#insideCanvas {
+    z-index: 1;
+}
+
+h1 {
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: black;
+    border: 2px solid hotpink;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: 2px solid hotpink;
+}
+
+/* text selection */
+::-moz-selection {
+    background-color: hotpink;
+}
+
+::selection {
+    background-color: hotpink;
+}
