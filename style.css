@@ -6,9 +6,9 @@
 }
 
 :root {
-    --pink: #F4BFCB;
-    --baby-pink: #ffe7eb;
-    --highlight: #86c9ff;
+    --pink: #f0a9b9;
+    --bg: #fff4c0;
+    --highlight: #bfe6f4;
 }
 
 html,
@@ -17,7 +17,7 @@ body {
     padding: 0;
     font-family: 'Authentic Sans', Helvetica, arial;
     /* background-image: linear-gradient(to left, hotpink, lightpink); */
-    background: var(--baby-pink);
+    background: var(--bg);
 }
 
 #myCanvas {
