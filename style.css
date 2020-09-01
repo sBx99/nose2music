@@ -32,19 +32,36 @@ body {
     z-index: 5;
     flex: 0 1 500px;
     height: 400px;
-    margin: 10px;
+    margin: 30px;
     border: 2px dashed black;
     background: var(--pink);
     font-size: 2rem;
     text-align: center;
 }
 
+parent {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: var(--highlight);
+    border-bottom: 2px solid black;
+    padding: 0.1em;
+}
+
+footer {
+    background-color: var(--highlight);
+    border-top: 2px solid black;
+    padding: 0.1em;
+}
 
 h1 {
     color: black;
     font-weight: 500;
     text-align: center;
-    font-size: 1.75em;
+    font-size: 1.5em;
 }
 
 p {

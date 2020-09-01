@@ -2,7 +2,7 @@
 <br />
 
 <p align="center"><samp>
-🎶👁️👃👁️🎵 move your nose around to make some tunes!
+🎶👁️👃👁️🎵 move your <b>nose</b> around to make some <i>tunes</i>!
 </samp></p><br />
 
 <p align="center"><samp>

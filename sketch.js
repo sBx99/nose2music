@@ -66,7 +66,7 @@ function lowResSetup() {
 }
 
 function lowResDraw() {
-  let threshold = 245;
+  let threshold = 245
   loadPixels()
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
