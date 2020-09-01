@@ -87,18 +87,16 @@ function lowResDraw() {
 }
 
 function mirrorVideo() {
-  push()
   translate(width, 0)
   scale(-1, 1)
-  pop()
 }
 
 function draw() {
   mirrorVideo()
-  // tint(tintCol)
+  tint(tintCol)
   image(video, 0, 0, width, height)
   lowResDraw()
   drawPoses()
-  // filter(ERODE)
+  filter(ERODE)
   // filter(BLUR)
 }
