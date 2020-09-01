@@ -87,10 +87,10 @@ function lowResDraw() {
 }
 
 function mirrorVideo() {
-  // push()
+  push()
   translate(width, 0)
   scale(-1, 1)
-  // pop()
+  pop()
 }
 
 function draw() {
