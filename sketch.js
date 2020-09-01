@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-  vidCanv = createCanvas(640, 480)
+  vidCanv = createCanvas(500, 400)
   vidCanv.parent('myVideoCanvas')
   video = createCapture(VIDEO)
   video.size(width, height)
