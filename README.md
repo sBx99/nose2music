@@ -2,5 +2,5 @@
 <br />
 
 <p align="center"><samp>
-these static files look better on <a href="https://ml-is-more-fun-than-u-think.netlify.app/">netlify</a>!
+these static files look better on <a href="https://nose2music.netlify.app/">netlify</a>!
 </samp></p>
