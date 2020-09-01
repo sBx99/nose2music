@@ -167,9 +167,8 @@ function modelReady() {
 Tone.Transport.scheduleRepeat(triggerSynth, '4n')
 
 function setup() {
-  createCanvas(500, 400);
-  // vidCanv = createCanvas(500, 400)
-  // vidCanv.parent('myVideoCanvas')
+  vidCanv = createCanvas(500, 400)
+  vidCanv.parent('myVideoCanvas')
   video = createCapture(VIDEO);
   video.size(width, height);
   video.hide();
@@ -179,7 +178,7 @@ function setup() {
     poses = results;
   });
 
-  // lowResSetup()
+  lowResSetup()
 
   w = width / numBars;
   for (let i = 0; i < numBars; i++) {
