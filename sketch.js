@@ -297,7 +297,6 @@ function draw() {
   lowResDraw()
   drawKeypoints()
   drawSkeleton()
-  lowResDraw()
   drawPoses()
   for (let k = 0; k < bars.length; k++) {
     bars[k].display();
