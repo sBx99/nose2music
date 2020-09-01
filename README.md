@@ -1,6 +1,10 @@
-<h1 align="center"><samp>ml is waaay more fun than you think.</samp></h1>
+<h1 align="center"><samp>nose2music </samp></h1>
 <br />
 
 <p align="center"><samp>
-these static files look better on <a href="https://nose2music.netlify.app/">netlify</a>!
+🎶👁️👃👁️🎵 move your nose around to make some tunes!
+</samp></p><br />
+
+<p align="center"><samp>
+deployed on both <a href="https://sirat.me/nose2music/">github pages</a> and <a href="https://nose2music.netlify.app/">netlify</a>
 </samp></p>
