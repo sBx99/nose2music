@@ -184,10 +184,17 @@ function mirrorVideo() {
   scale(-1, 1)
 }
 
+function coolTint() {
+  fill(206, 158, 255, 60)
+  noStroke()
+  rect(20, 20, width, height)
+}
+
 function draw() {
   image(video, 0, 0, width, height)
   mirrorVideo()
   lowResDraw()
+  coolTint()
   drawKeypoints()
   drawSkeleton()
   drawPoses()
