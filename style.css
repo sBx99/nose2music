@@ -1,65 +1,74 @@
-@font-face {
-    font-family: "AUTHENTIC Sans";
-    src: url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.woff2?v=1595102445095") format("woff2"),
-        url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.woff?v=1595102445203") format("woff"),
-        url("https://cdn.glitch.com/4e08fdce-4f09-4168-8b21-d44271860232%2FAUTHENTICSans-90.otf?v=1595102498458") format("otf");
-}
+@import url("http://fonts.cdnfonts.com/css/menlo");
 
 :root {
-    --pink: #f0a9b9;
-    --bg: #ffc0cb;
-    --highlight: #bfe6f4;
+    --bg: #ffe697;
+    --pink: #faf;
+    --cool: #f0f3;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Authentic Sans', Helvetica, arial;
-    /* background-image: linear-gradient(to left, hotpink, lightpink); */
-    background: var(--bg);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-#myCanvas {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: "Menlo", monospace;
+    font-weight: bold;
+    /* background-image: linear-gradient(to left, hotpink, lightpink); */
+    background: var(--pink);
+}
+
+.p5Canvas {
+    z-index: 100;
+    border: 1px solid #000;
+    filter: drop-shadow(0 0 20px #f0f7) saturate(1.1) brightness(1.1);
     overflow: hidden;
     z-index: -1;
+}
+
+main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
 
-.canvas-item {
-    z-index: 5;
-    flex: 0 1 500px;
-    height: 400px;
-    margin: 30px;
-    border: 2px dashed black;
-    background: var(--pink);
-    font-size: 2rem;
-    text-align: center;
+button {
+    outline: none;
 }
 
-parent {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: auto 1fr auto;
+#changeImg {
+    font-family: inherit;
+    font-weight: inherit;
+    border: 1px solid #0000;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 1.1em;
+    height: 1em;
+    padding: 1em 1em 2em 1em;
+    margin-left: 3em;
 }
 
-header {
-    background-color: var(--highlight);
-    border-bottom: 2px solid black;
-    padding: 0.1em;
+#changeImg:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px #f0f);
 }
 
-footer {
-    background-color: var(--highlight);
-    border-top: 2px solid black;
-    padding: 0.1em;
+button:focus {
+    transform: scale(0.9);
 }
 
 h1 {
     color: black;
-    font-weight: 500;
     text-align: center;
     font-size: 1.5em;
 }
@@ -74,20 +83,20 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: var(--highlight);
+    background-color: var(--cool);
     border: 2px solid var(--pink);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--highlight);
+    background-color: var(--cool);
     border: 2px solid var(--pink);
 }
 
 /* text selection */
 ::-moz-selection {
-    background-color: var(--highlight);
+    background-color: var(--pink);
 }
 
 ::selection {
-    background-color: var(--highlight);
+    background-color: var(--pink);
 }
