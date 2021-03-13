@@ -10,15 +10,14 @@ class Bar {
    }
 
    display() {
-      // fill(255, 192, 203, this.a)
-      fill(255, 192, 203, 0); // no alpha
-      stroke(0);
+      fill(255, 170, 255, this.a);
+      stroke(255);
       strokeWeight(2);
       rect(this.x, this.y, this.w, this.h);
    }
 
    play(n) {
-      this.a = 150;
+      this.a = 15;
       this.note = n;
    }
 

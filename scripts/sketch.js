@@ -99,7 +99,7 @@ function setup() {
 
    w = width / numBars;
    for (let i = 0; i < numBars; i++) {
-      bars.push(new Bar(w * i, w));
+      bars.push(new Bar(w * i, w)); // the "Bar" class is initialized here
    }
 }
 
@@ -116,7 +116,6 @@ function drawKeypoints() {
          let keypoint = pose.keypoints[j];
          if (keypoint.score > 0.2) {
             noStroke();
-            // fill(255, 116, 140)
             noFill();
             ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
             for (let k = 0; k < bars.length; k++) {
@@ -212,8 +211,8 @@ function lowResDraw() {
 }
 
 function mirrorVideo() {
-   translate(width, 0);
-   scale(-1, 1);
+   translate(width, 0, 0);
+   scale(-1, 1, 0);
 }
 
 function coolTint() {
@@ -223,20 +222,12 @@ function coolTint() {
 }
 
 function draw() {
-   background(0);
    translate(-width / 2, -height / 2, 0);
-
    mirrorVideo();
    image(video, 0, 0, width, height);
    lowResDraw();
-
    drawKeypoints();
    drawPoses();
-
-   /*
-   coolTint();
-   drawSkeleton();
-   for (let k = 0; k < bars.length; k++) {
-      bars[k].display();
-   } */
+   /* coolTint();
+   drawSkeleton(); */
 }
