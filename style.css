@@ -260,13 +260,14 @@ body::-webkit-scrollbar-thumb {
       margin-left: 0;
    }
 
-   .button > .emojis {
+   .button > .choose {
       display: none;
    }
 
    .buttons > .btns {
       margin-top: 0;
       flex-direction: row;
+      font-size: 0.75em;
    }
 
    .buttons > p {
