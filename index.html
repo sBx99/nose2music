@@ -4,7 +4,7 @@
       <title>nose2music</title>
       <!-- meta tags -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#bfe6f4" />
+      <meta name="theme-color" content="#faf" />
 
       <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" />
       <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
@@ -52,21 +52,18 @@
       <!-- my scripts -->
       <script src="sketch.js" defer></script>
       <script src="bars.js" defer></script>
-      <script>
-         // on clicking button, image chosen will change
-         function changeImage() {
-            var count = 0;
-
-            document.getElementById("#changeImg").innerText = "You've chosen an image!";
-         }
-      </script>
    </head>
 
    <body>
-      <h1>👃 nose2music 🎶</h1>
+      <h1>nose2music</h1>
       <main>
          <div id="myVideoCanvas"></div>
-         <button id="changeImg" onClick="changeImage()">Change your Avatar</button>
+         <div class="buttons">
+            <p>Choose an Avatar</p>
+            <button id="btn1" class="button">Choose <span class="emojis">👁️👃👁️</span></button>
+            <button id="btn2" class="button">Choose <span class="emojis">🤠🤠🤠</span></button>
+            <button id="btn3" class="button">Choose <span class="emojis">👁️👄👁️</span></button>
+         </div>
       </main>
       <p>Move your nose around to make some music!</p>
    </body>

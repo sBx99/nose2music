@@ -1,5 +1,5 @@
 // variables
-let video, poseNet, nose, cols, rows;
+let video, poseNet, cols, rows, nose, noseImg, img1, img2, img3, btn1, btn2, btn3;
 
 let poses = [];
 let trails = [];
@@ -11,16 +11,19 @@ let w = 0;
 let numBars = 7;
 let res = 15;
 
-let notes = ["F6", "D5", "E5", "C4", "E4", "C6", "E6"];
+let notes = ["Db4", "F4", "A4", "C5", "Eb4", "D3", "F5"];
 let playNotes = [];
 
 let synth = new Tone.PolySynth(numBars, Tone.Synth).toMaster();
 
 // preload
 function preload() {
-   // noseImg = loadImage('assets/face1.png')
+   img1 = loadImage("assets/face1.png");
+   img2 = loadImage("assets/cowboy.png");
+   img3 = loadImage("assets/face2.png");
+
+   // default noseImg
    noseImg = loadImage("assets/face2.png");
-   // noseImg = loadImage('assets/cowboy.png')
 }
 
 // setup
@@ -46,7 +49,7 @@ function triggerSynth(time) {
       }
    }
    console.log(playNotes);
-   synth.triggerAttackRelease(playNotes, "4n");
+   synth.triggerAttackRelease(playNotes, "8n");
 }
 
 function modelReady() {
@@ -56,13 +59,37 @@ function modelReady() {
 
 Tone.Transport.scheduleRepeat(triggerSynth, "4n");
 
+// choose image
+function chooseImg1() {
+   noseImg = img1;
+}
+
+function chooseImg2() {
+   noseImg = img2;
+}
+
+function chooseImg3() {
+   noseImg = img3;
+}
+
 function setup() {
-   vidCanv = createCanvas(450, 400);
+   // canvas
+   vidCanv = createCanvas(450, 450, WEBGL);
    vidCanv.parent("myVideoCanvas");
    video = createCapture(VIDEO);
+   video.size(450, 450);
    video.size(width, height);
    video.hide();
    poseNet = ml5.poseNet(video, modelReady);
+
+   //buttons
+   btn1 = select("#btn1");
+   btn2 = select("#btn2");
+   btn3 = select("#btn3");
+
+   btn1.mousePressed(chooseImg1);
+   btn2.mousePressed(chooseImg2);
+   btn3.mousePressed(chooseImg3);
 
    poseNet.on("pose", function (results) {
       poses = results;
@@ -196,14 +223,20 @@ function coolTint() {
 }
 
 function draw() {
+   background(0);
+   translate(-width / 2, -height / 2, 0);
+
    mirrorVideo();
    image(video, 0, 0, width, height);
    lowResDraw();
-   // coolTint()
+
    drawKeypoints();
-   // drawSkeleton()
    drawPoses();
+
+   /*
+   coolTint();
+   drawSkeleton();
    for (let k = 0; k < bars.length; k++) {
       bars[k].display();
-   }
+   } */
 }
