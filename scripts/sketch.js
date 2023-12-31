@@ -88,7 +88,7 @@ function setup() {
    vidCanv.parent("myVideoCanvas");
    video = createCapture(VIDEO);
 
-   // video.size(450, 450);
+   video.size(450, 450);
    video.size(width, height);
    video.hide();
    poseNet = ml5.poseNet(video, modelReady);
