@@ -11,6 +11,7 @@ import { Bar } from "./sketch"
 
 // variables
 let video, poseNet, nose, leftEye, rightEye, cols, rows, noseImg, leftEyeImg, rightEyeImg;
+
 let poses = [];
 let trails = [];
 let field = [];
@@ -31,7 +32,9 @@ function preload() {
    img1 = loadImage("assets/face1.png");
    img2 = loadImage("assets/cowboy.png");
    img3 = loadImage("assets/face2.png");
-   // noseImg = loadImage('assets/noseImg.png');
+
+   // default nose image
+   noseImg = loadImage('assets/noseImg.png');
    // leftEyeImg = loadImage('assets/eyeImg.png');
    // rightEyeImg = loadImage('assets/eyeImg.png');
 }
@@ -83,25 +86,23 @@ function chooseImg3() {
 }
 
 function setup() {
-   // everything that appears on the canvas
-   vidCanv = createCanvas(500, 400);
+   vidCanv = createCanvas(450, 450, WEBGL);
    vidCanv.parent("myVideoCanvas");
    video = createCapture(VIDEO);
-
    video.size(450, 450);
    video.size(width, height);
    video.hide();
    poseNet = ml5.poseNet(video, modelReady);
 
-   // buttons
+   //buttons
    btn1 = select("#btn1");
    btn2 = select("#btn2");
    btn3 = select("#btn3");
 
-   // button DOM interaction
    btn1.mousePressed(chooseImg1);
    btn2.mousePressed(chooseImg2);
-   btn3.mousePressed(chooseImg3)
+   btn3.mousePressed(chooseImg3);
+
    poseNet.on("pose", function (results) {
       poses = results;
    });
@@ -110,7 +111,7 @@ function setup() {
 
    w = width / numBars;
    for (let i = 0; i < numBars; i++) {
-      bars.push(new Bar(w * i, w)); // class Bar init
+      bars.push(new Bar(w * i, w)); // the "Bar" class is initialized here
    }
 }
 
