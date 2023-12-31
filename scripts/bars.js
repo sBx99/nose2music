@@ -1,4 +1,4 @@
-export class Bar {
+class Bar {
    // basic parameters
    constructor(x, w) {
       this.x = x; // x-coordinate
@@ -26,3 +26,5 @@ export class Bar {
       this.note = 0;
    }
 }
+
+export default Bar;

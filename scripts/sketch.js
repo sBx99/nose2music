@@ -7,7 +7,7 @@
  ***/
 
 // imports
-import { Bar } from "./sketch"
+import Bar from "./bars.js"
 
 // variables
 let video, poseNet, nose, leftEye, rightEye, cols, rows, noseImg, leftEyeImg, rightEyeImg;

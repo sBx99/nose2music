@@ -5,6 +5,7 @@
       <!-- meta tags -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#000" />
+      <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
       <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" />
       <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
@@ -53,8 +54,9 @@
 
       <!-- my scripts -->
       <script src="scripts/hueRotate.js" defer></script>
-      <script src="scripts/sketch.js" defer></script>
-      <script src="scripts/bars.js" defer></script>
+      <script src="scripts/resumeAudioContext"></script>
+      <script type="module" src="scripts/sketch.js" defer></script>
+      <script type="module" src="scripts/bars.js" defer></script>
    </head>
 
    <body id="body">
@@ -65,6 +67,12 @@
                Hey there <span class="emojis" role="img" aria-label="waving hand emoji">👋</span>!
             </p>
             <p>Move your nose around to make some music.</p>
+            <!--p>Hear some sound by clicking below!</p-->
+            <button class="button playAudioBtn">
+               <span class="emojis" role="img" aria-label="3 backhand index pointing down emojis">
+                  Play Audio 🎹🔊
+               </span>
+            </button>
             <p>
                Learn more about this project here
                <span class="emojis" role="img" aria-label="3 backhand index pointing down emojis"
